@@ -1,0 +1,4 @@
+# Turn on the Rewrite engine
+RewriteEngine On
+# Place entire url in a capture group & rewrite to use the public folder
+RewriteRule (.*) public/$1

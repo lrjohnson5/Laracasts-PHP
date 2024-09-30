@@ -1,0 +1,14 @@
+# Directories to be ignored by git
+webalizer
+.idea
+dashboard
+xampp
+
+# Files to be ignored by git
+*.old
+bitnami.css
+*.zip
+*.gz
+*.iso
+*.jar
+
