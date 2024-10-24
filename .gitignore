@@ -12,3 +12,5 @@ bitnami.css
 *.iso
 *.jar
 
+
+/vendor/

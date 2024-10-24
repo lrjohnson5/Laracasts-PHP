@@ -1,0 +1,26 @@
+{
+    "name": "lrjoh/htdocs",
+    "authors": [
+        {
+            "name": "Lindsay Johnson",
+            "email": "lrjohnson5@yahoo.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^11.29"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
