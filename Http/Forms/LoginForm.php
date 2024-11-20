@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: LoginForm.php
+ * Description: Manages login form validation and handling.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 namespace Http\Forms;
 
 use Core\ValidationException;

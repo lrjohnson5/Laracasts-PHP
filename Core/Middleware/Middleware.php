@@ -1,7 +1,13 @@
 <?php
 
-namespace Core\Middleware;
+/**
+ * File Name: Middleware.php
+ * Description: Base middleware class.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
 
+namespace Core\Middleware;
 
 class Middleware
 {

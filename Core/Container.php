@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: Container.php
+ * Description: Dependency injection container to manage Class dependencies.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 namespace Core;
 
 class Container

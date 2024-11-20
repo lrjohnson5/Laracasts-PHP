@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: Session.php
+ * Description: Manages user sessions.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 namespace Core;
 
 class Session

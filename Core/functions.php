@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: functions.php
+ * Description: Helper functions used throughout the app.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 use Core\Response;
 
 function dd($value, $die = true) {

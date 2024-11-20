@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: Validator.php
+ * Description: Manages input validation.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 namespace Core;
 
 class Validator {

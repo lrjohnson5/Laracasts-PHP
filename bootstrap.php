@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: bootstrap.php
+ * Description: Initializes the app by setting configurations and loading essential Classes.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 use Core\App;
 use Core\Container;
 use Core\Database;

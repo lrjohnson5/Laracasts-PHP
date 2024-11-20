@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: Authenticator.php
+ * Description: Manages user authentication.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 namespace Core;
 
 class Authenticator

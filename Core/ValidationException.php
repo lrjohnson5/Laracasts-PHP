@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: ValidationException.php
+ * Description: Custom exception for validation errors.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 namespace Core;
 
 class ValidationException extends \Exception

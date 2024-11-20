@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * File Name: App.php
+ * Description: Manages application initialization and execution through the use of containers.
+ *
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 namespace Core;
 
 class App {

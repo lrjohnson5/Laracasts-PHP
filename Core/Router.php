@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: Router.php
+ * Description: Manages routing logic, mapping requests to controllers.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 namespace Core;
 
 use Core\Middleware\Auth;

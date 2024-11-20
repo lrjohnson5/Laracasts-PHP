@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: routes.php
+ * Description: Defines route mappings for the app, associating URL paths with controllers.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 // Static Pages
 $router->get('/', 'index.php');
 $router->get('/about', 'about.php');

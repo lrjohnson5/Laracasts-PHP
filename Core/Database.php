@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * File Name: Database.php
+ * Description: Manages database connections and queries.
+ * Author: Laracasts.com
+ * Created Date: 2024-11-08
+ */
+
 namespace Core;
 
 use PDO;
