@@ -22,8 +22,6 @@ use Core\Database;
 // 'Database::class' evaluates to a string of the full namespace path to the class, e.g. 'Core\Database'
 $db = App::resolve(Database::class);
 
-$currentUserId = 3;
-
 // Queries the database to fetch the details of the note being deleted.
 // The `findOrFail()` method ensures that an exception is thrown if no
 // matching note is found.
@@ -32,11 +30,12 @@ $note = $db->query('SELECT * FROM notes WHERE id = :id', [
 ])->findOrFail();
 
 // Ensures that the current user is authorized to delete the note.
-authorize($note['user_id'] === $currentUserId);
+authorize($note['user_id'] === $_SESSION['user']['user_id']);
 
 // form was submitted; delete the current note
+// needs an exception case
 $db->query('DELETE FROM notes WHERE id = :id', [
-    'id' => $_GET['id']
+    'id' => $_POST['id']
 ]);
 
 // Redirect to notes list

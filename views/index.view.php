@@ -9,5 +9,3 @@
 </main>
 
 <?php require('partials/footer.php') ?>
-
-<?php dd($_SESSION); ?>

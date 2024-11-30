@@ -14,9 +14,9 @@
         <?php endforeach; ?>
         </ul>
 
-        <p class="mt-6">
-            <a href="/notes/create" class="text-blue-500 underline">Create Note...</a>
-        </p>
+        <footer class="mt-6">
+            <a href="/notes/create" class="rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Create Note...</a>
+        </footer>
     </div>
 </main>
 

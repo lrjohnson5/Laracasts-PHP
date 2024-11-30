@@ -10,29 +10,22 @@
                 <input type="hidden" name="_method" value="PATCH">
                 <!-- use another hidden input, this time to pass along the id of the record bing edited -->
                 <input type="hidden" name="id" value="<?= $note['id'] ?>">
+                <div class="border-b border-gray-900/10 pb-12">
+                    <div class="col-span-full">
+                        <label for="body" class="mb-4 block text-md font-medium leading-6 text-gray-900">Note Body:</label>
+                        <div class="mt-2">
+                            <textarea
+                                id="body"
+                                name="body"
+                                rows="3"
+                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                placeholder="Note..."
+                                autofocus
+                            ><?= $note['body'] ?></textarea>
 
-
-                <div class="space-y-12">
-                    <div class="border-b border-gray-900/10 pb-12">
-                        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-
-                            <div class="col-span-full">
-                                <label for="body" class="block text-sm font-medium leading-6 text-gray-900">Note Body</label>
-                                <div class="mt-2">
-                                    <textarea
-                                        id="body"
-                                        name="body"
-                                        rows="3"
-                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                        placeholder="Note..."
-                                    ><?= $note['body'] ?></textarea>
-
-                                    <?php if (isset($errors['body'])) : ?>
-                                        <p class="text-red-600 text-xs mt-2"><?= $errors['body'] ?></p>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-
+                            <?php if (isset($errors['body'])) : ?>
+                                <p class="text-red-600 text-xs mt-2"><?= $errors['body'] ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

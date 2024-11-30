@@ -20,9 +20,7 @@ class Authenticator
         if ($user) {
             // have a user, now make sure password matches
             if (password_verify($password, $user['password'])) {
-                $this->login([
-                    'email' => $email
-                ]);
+                $this->login($user);
 
                 return true;
             }
@@ -35,7 +33,8 @@ class Authenticator
     public function login($user) {
         // mark current user as logged-in
         $_SESSION['user'] = [
-            'email' => $user['email']
+            'email' => $user['email'],
+            'user_id' => $user['id']
         ];
 
         session_regenerate_id(true);

@@ -19,7 +19,7 @@ use Core\Database;
 $db = App::resolve(Database::class);
 
 // Executes a query to fetch all notes associated with the currently authenticated user.
-$notes = $db->query('SELECT * FROM notes WHERE user_id = 3')->get();
+$notes = $db->query('SELECT * FROM notes WHERE user_id = :id', ['id' => $_SESSION['user']['user_id']])->get();
 
 // Passes the list of notes and page heading to the index view for rendering.
 view("notes/index.view.php", [

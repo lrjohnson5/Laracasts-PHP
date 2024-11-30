@@ -9,8 +9,6 @@
 
 namespace Core;
 
-use Core\Middleware\Auth;
-use Core\Middleware\Guest;
 use Core\Middleware\Middleware;
 
 class Router
@@ -66,9 +64,14 @@ class Router
             if ($route['uri'] == $uri && $route['method'] == strtoupper($method)) {
                 Middleware::resolve($route['middleware']);
 
+                // dd($route, false);
+
                 return require base_path('Http/controllers/' . $route['controller']);
             }
         }
+
+        // dd($uri . "+" . $method, false);
+
         $this->abort();
     }
 

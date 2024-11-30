@@ -11,7 +11,6 @@
  */
 
 use Core\App;
-use Core\Authenticator;
 use Core\Database;
 use Core\Validator;
 
@@ -47,22 +46,18 @@ $user = $db->query('SELECT * FROM users WHERE email = :email', [
     'email' => $email
 ])->find();
 
-if ($user) {
-    // if exists, redirect to login page
-    header('location: /');
-    exit();
-} else {
-    // if not, save new user to the database, log new user in, redirect
+$msg = '';
+
+if (!$user) {
+    // if not a current user, save new user to the database
     $db->query('INSERT INTO users (email, password) VALUES (:email, :password)', [
         'email' => $email,
         'password' => password_hash($password, PASSWORD_BCRYPT)
     ]);
-
-    // Creates an authenticated session for the new user using the `Authenticator` class.
-    $auth = new Authenticator;
-    $auth->login(['email' => $email]);
-
-    // Redirect to homepage after successful registration and login
-    header('location: /');
-    exit();
+} else {
+    // fatal error
 }
+
+// Redirect to Login page
+header('location: /login');
+exit();

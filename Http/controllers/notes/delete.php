@@ -1,9 +1,9 @@
 <?php
 
 /**
- * File Name: /notes/edit.php
+ * File Name: /notes/delete.php
  *
- * Description: Routes to edit note view if note exists and user authorized
+ * Description: Routes to delete note view if note exists and user authorized
  *
  * Author: Laracasts.com
  * Created Date: 2024-11-20
@@ -26,9 +26,9 @@ $note = $db->query('SELECT * FROM notes WHERE id = :id', [
 // Ensures that the current user is authorized to edit the note.
 authorize($note['user_id'] === $_SESSION['user']['user_id']);
 
-// * Passes the note details to the edit view for rendering.
-view("notes/edit.view.php", [
-    'heading' => 'Edit a Note',
+// * Passes the note details to the delete view for rendering.
+view("notes/delete.view.php", [
+    'heading' => 'Delete a Note',
     'errors' => [],
     'note' => $note
 ]);

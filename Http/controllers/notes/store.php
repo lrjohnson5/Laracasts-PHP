@@ -37,11 +37,13 @@ if (! empty($errors)) {
     ]);
 }
 
+dd($_SESSION, false);
+
 // Executes an SQL query to insert the new note into the `notes` table. The note's body and
 // the `user_id` of the currently authenticated user are provided as parameters.
 $db->query('INSERT INTO notes(body, user_id) VALUES(:body, :user_id)', [
     ':body' => $_POST['body'],
-    ':user_id' => 3
+    ':user_id' => $_SESSION['user']['user_id'],
 ]);
 
 // Redirects to the notes page
