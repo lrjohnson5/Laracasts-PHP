@@ -1,0 +1,5 @@
+.gitignore
+!.gitignore
+!logs/.gitignore
+!cache/.gitignore
+!sessions/.gitignore

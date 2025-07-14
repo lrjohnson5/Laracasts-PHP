@@ -1,3 +1,8 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
 # Directories to be ignored by git
 webalizer
 .idea
@@ -11,6 +16,10 @@ bitnami.css
 *.gz
 *.iso
 *.jar
-
+vendor/
+composer.phar
+*.log
+.DS_Store
+Thumbs.db
 
 /vendor/
