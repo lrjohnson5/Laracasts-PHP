@@ -1,5 +1,7 @@
 <?php
 
+namespace Http\Controllers\Registration;
+
 /**
  * File Name: /registration/store.php
  *

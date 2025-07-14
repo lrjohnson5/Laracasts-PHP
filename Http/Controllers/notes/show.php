@@ -1,6 +1,8 @@
 
 <?php
 
+namespace Http\Controllers\Notes;
+
 /**
  * File Name: /notes/show.php
  *

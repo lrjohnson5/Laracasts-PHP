@@ -1,5 +1,7 @@
 <?php
 
+namespace Http\Controllers\Session;
+
 use Core\Authenticator;
 
 $auth = new Authenticator;

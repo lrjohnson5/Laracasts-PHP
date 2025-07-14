@@ -25,7 +25,6 @@ class Authenticator
             // have a user, now make sure password matches
             if (password_verify($password, $user['password'])) {
                 $this->login($user);
-
                 return true;
             }
         }
@@ -50,18 +49,4 @@ class Authenticator
         Session::destroy();
     }
 
-    public function check(): bool
-    {
-        return isset($_SESSION['user']);
-    }
-
-    public function user(): ?array
-    {
-        return $_SESSION['user'] ?? null;
-    }
-
-    public function id(): ?int
-    {
-        return $_SESSION['user']['user_id'] ?? null;
-    }
 }

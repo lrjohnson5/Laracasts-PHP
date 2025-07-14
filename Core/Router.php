@@ -67,7 +67,7 @@ class Router
         foreach ($this->routes as $route) {
             if ($route['uri'] == $uri && $route['method'] == strtoupper($method)) {
                 Middleware::resolve($route['middleware']);
-                return require base_path('Http/controllers/' . $route['controller']);
+                return require base_path('Http/Controllers/' . $route['controller']);
             }
         }
 
@@ -84,15 +84,5 @@ class Router
         http_response_code($code);
         require base_path("views/{$code}.php");
         die();
-    }
-
-    public function routeExists(string $uri, string $method): bool
-    {
-        foreach ($this->routes as $route) {
-            if ($route['uri'] == $uri && $route['method'] == strtoupper($method)) {
-                return true;
-            }
-        }
-        return false;
     }
 }
